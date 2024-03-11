@@ -7,7 +7,6 @@ import 'package:portfolio_abhay/widgets/header_desktop.dart';
 import 'package:portfolio_abhay/widgets/header_mobile.dart';
 import 'package:portfolio_abhay/widgets/mainDesktop.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -25,7 +24,6 @@ class _HomePageState extends State<HomePage> {
         endDrawer: constraints.maxWidth >= kMinDesktopWidth
             ? null
             : const DrawerMobile(),
-
         backgroundColor: CustomColor.scaffoldBg,
         body: ListView(scrollDirection: Axis.vertical, children: [
           if (constraints.maxWidth >= kMinDesktopWidth)
