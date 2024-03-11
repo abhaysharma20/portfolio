@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_abhay/constants/colors.dart';
-import 'package:portfolio_abhay/constants/nav_items.dart';
 import 'package:portfolio_abhay/constants/size.dart';
-import 'package:portfolio_abhay/styles/style.dart';
+import 'package:portfolio_abhay/widgets/desktop_mobile.dart';
 import 'package:portfolio_abhay/widgets/drawer_mobile.dart';
 import 'package:portfolio_abhay/widgets/header_desktop.dart';
 import 'package:portfolio_abhay/widgets/header_mobile.dart';
-import 'package:portfolio_abhay/widgets/side_logo.dart';
+import 'package:portfolio_abhay/widgets/mainDesktop.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -39,6 +39,9 @@ class _HomePageState extends State<HomePage> {
                   ? scaffoldKey.currentState!.closeEndDrawer()
                   : scaffoldKey.currentState!.openEndDrawer();
             }),
+          constraints.maxWidth >= kMinDesktopWidth
+              ? MainDesktop()
+              : DesktopMobile(),
 
           Container(
             height: 500,
