@@ -25,6 +25,7 @@ class _HomePageState extends State<HomePage> {
         endDrawer: constraints.maxWidth >= kMinDesktopWidth
             ? null
             : const DrawerMobile(),
+
         backgroundColor: CustomColor.scaffoldBg,
         body: ListView(scrollDirection: Axis.vertical, children: [
           if (constraints.maxWidth >= kMinDesktopWidth)
